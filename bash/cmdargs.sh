@@ -44,25 +44,18 @@ while [ $# -gt 0 ]; do
 	echo "'$1'Processing."
 	case $1 in
 		-h )
-			echo "adding \"-h\" for help."
-			echo 'Processing -h'
+		
 			echo "$help"
 			echo "$ver"
 			echo "$deb"
 			;;
 		-v )
 			verbose=1
-			echo 'adding "-v" for verbose.'
-			echo 'Verbose mode on.'
-			echo 'Processing "-v"'
 			;;
 		-d )
 			debug=1
 			case "$2" in
 			[1-5] )
-				echo "Debug mode is in ON state."
-				level=$2
-				echo "adding \"-d\" to debug $2."
 				shift
 				;;
 				*)
